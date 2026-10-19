@@ -5,19 +5,33 @@ public class Caesar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
-		
-		//Read in message
-String message = in.nextLine();
-		//Read in shift
-String shift = in.nextLine();
-		//Loop through message
-			//if letter is alphabetic
-				//apply shift
-				//if letter is past 'Z'
-					//subtract 26
-			//add letter to output
+		System.out.println("Hello user! You may now read in a message of your choice.");
+		// Read in message
+		String message = in.nextLine();
+		// Read in shift
+		int shift = in.nextInt();
+		String output = "";
+		// Loop through message
+		// if letter is alphabetic
+		// apply shift
+		// if letter is past 'Z'
+		// subtract 26
+		// add letter to output
+		for (int x = 0; x < message.length(); x++) {
+			char letter = message.charAt(x);
+			if (Character.isAlphabetic(letter)) {
+				letter += shift;
+				if (letter > 'z') {
+					letter -= 26;
+				}
+				if (letter > 'Z') {
+					letter -= 26;
+				}
+			}
+			output += letter;
 
-		//print output
-	
+		}
+		// print output
+		System.out.println(output);
 	}
 }
