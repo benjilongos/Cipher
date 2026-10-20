@@ -9,6 +9,7 @@ public class Caesar {
 		// Read in message
 		String message = in.nextLine();
 		// Read in shift
+		//int shift = in.nextLine().toUpperCase().charAt(0)-'A';
 		int shift = in.nextInt();
 		String output = "";
 		// Loop through message
@@ -20,13 +21,11 @@ public class Caesar {
 		for (int x = 0; x < message.length(); x++) {
 			char letter = message.charAt(x);
 			if (Character.isAlphabetic(letter)) {
-				letter += shift;
-				if (letter > 'z') {
+				letter += (int)(shift);
+				if (letter > 'z' ) {
 					letter -= 26;
 				}
-				if (letter > 'Z') {
-					letter -= 26;
-				}
+		
 			}
 			output += letter;
 
