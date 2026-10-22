@@ -9,7 +9,7 @@ public class Vigenere {
 		// Read in message
 		String message = in.nextLine();
 		// Read in shift
-		int shift = in.nextLine().toUpperCase().charAt(0)-'A';
+		int shift = in.nextLine().toUpperCase().charAt(0) - 'A';
 		String output = "";
 		// Loop through message
 		// if letter is alphabetic
@@ -20,11 +20,11 @@ public class Vigenere {
 		for (int x = 0; x < message.length(); x++) {
 			char letter = message.charAt(x);
 			if (Character.isAlphabetic(letter)) {
-				letter += (int)(shift);
-				if (letter > 'z' ) {
+				letter += (int) (shift);
+				if (letter > 'z') {
 					letter -= 26;
 				}
-		
+
 			}
 			output += letter;
 
