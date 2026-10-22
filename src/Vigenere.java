@@ -17,6 +17,7 @@ public class Vigenere {
 		// if letter is past 'Z'
 		// subtract 26
 		// add letter to output
+		// make sure to also loop through the key later on
 		for (int x = 0; x < message.length(); x++) {
 			char letter = message.charAt(x);
 			if (Character.isAlphabetic(letter)) {
